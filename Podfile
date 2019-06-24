@@ -6,6 +6,7 @@ target 'Forebase_memo' do
   use_frameworks!
 
   pod 'Firebase/Core'
+  pod 'GoogleSignIn'
 
   # Pods for Forebase_memo
 

@@ -7,14 +7,33 @@
 //
 
 import UIKit
+import Firebase
+import GoogleSignIn
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
+    
+    @IBOutlet var label: UILabel!
+    @IBOutlet weak var signInButton: GIDSignInButton!
+    
+    var veri:String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+        GIDSignIn.sharedInstance().delegate = self
+        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().signIn()
+        //        FirebaseApp.configure()
+        //        label.text = FirebaseApp.app()?.name
     }
-
-
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
+        if let error = error {
+            return
+        }
+        guard let authentication = user.authentication else { return
+        }
+    }
+    
 }
 
