@@ -23,8 +23,6 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().signIn()
-        //        FirebaseApp.configure()
-        //        label.text = FirebaseApp.app()?.name
     }
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
@@ -32,6 +30,26 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
             return
         }
         guard let authentication = user.authentication else { return
+        }
+        
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
+        Auth.auth().signIn(with: credential) {
+            (AuthResult, error) in
+            if let error = error {
+                // error
+                return
+            }
+            //user is signed in
+            self.label.text = Auth.auth().currentUser?.displayName
+        }
+    }
+    
+    @IBAction func doAction(_sender: Any?) {
+        do {
+            try Auth.auth().signOut()
+            self.label.text = "logout..."
+        } catch let signOutError as NSError {
+            //error handling.
         }
     }
     

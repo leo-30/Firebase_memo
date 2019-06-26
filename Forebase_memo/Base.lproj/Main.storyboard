@@ -30,8 +30,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FW2-LB-QCT">
-                                <rect key="frame" x="70" y="273" width="275" height="147"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FW2-LB-QCT" customClass="GIDSignInButton">
+                                <rect key="frame" x="70" y="218" width="275" height="355"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -41,6 +41,7 @@
                     </view>
                     <connections>
                         <outlet property="label" destination="fGA-uR-X7P" id="5Gr-we-cMJ"/>
+                        <outlet property="signInButton" destination="FW2-LB-QCT" id="lZA-jZ-Cwv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
