@@ -39,6 +39,7 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
                 // error
                 return
             }
+            self.performSegue(withIdentifier: "toNext", sender: nil)
             //user is signed in
             self.label.text = Auth.auth().currentUser?.displayName
         }

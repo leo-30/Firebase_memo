@@ -13,6 +13,7 @@
 		3E8A3FCD22BA2FF10061D612 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E8A3FCC22BA2FF10061D612 /* Assets.xcassets */; };
 		3E8A3FD022BA2FF20061D612 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E8A3FCE22BA2FF10061D612 /* LaunchScreen.storyboard */; };
 		3E8A3FD822BA31DE0061D612 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E8A3FD722BA31DE0061D612 /* GoogleService-Info.plist */; };
+		3EA5D0FB22C91CCA00AF11A5 /* DatabaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA5D0FA22C91CCA00AF11A5 /* DatabaseViewController.swift */; };
 		BF2963A0670A3DEA2D1EA395 /* Pods_Forebase_memo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 149BA85B943318EFECAEDEF8 /* Pods_Forebase_memo.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		3E8A3FCF22BA2FF10061D612 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E8A3FD122BA2FF20061D612 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E8A3FD722BA31DE0061D612 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3EA5D0FA22C91CCA00AF11A5 /* DatabaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseViewController.swift; sourceTree = "<group>"; };
 		9891FB4278E235CF0F84BD87 /* Pods-Forebase_memo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Forebase_memo.debug.xcconfig"; path = "Target Support Files/Pods-Forebase_memo/Pods-Forebase_memo.debug.xcconfig"; sourceTree = "<group>"; };
 		B1F1D123278212B843A0785B /* Pods-Forebase_memo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Forebase_memo.release.xcconfig"; path = "Target Support Files/Pods-Forebase_memo/Pods-Forebase_memo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,6 +67,7 @@
 			children = (
 				3E8A3FC522BA2FEF0061D612 /* AppDelegate.swift */,
 				3E8A3FC722BA2FEF0061D612 /* ViewController.swift */,
+				3EA5D0FA22C91CCA00AF11A5 /* DatabaseViewController.swift */,
 				3E8A3FC922BA2FEF0061D612 /* Main.storyboard */,
 				3E8A3FCC22BA2FF10061D612 /* Assets.xcassets */,
 				3E8A3FCE22BA2FF10061D612 /* LaunchScreen.storyboard */,
@@ -193,18 +196,28 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Forebase_memo/Pods-Forebase_memo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EA5D0FB22C91CCA00AF11A5 /* DatabaseViewController.swift in Sources */,
 				3E8A3FC822BA2FEF0061D612 /* ViewController.swift in Sources */,
 				3E8A3FC622BA2FEF0061D612 /* AppDelegate.swift in Sources */,
 			);
