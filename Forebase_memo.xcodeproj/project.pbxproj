@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E0766D022C99BE30037ACCC /* DeleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0766CF22C99BE30037ACCC /* DeleteViewController.swift */; };
 		3E8A3FC622BA2FEF0061D612 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8A3FC522BA2FEF0061D612 /* AppDelegate.swift */; };
 		3E8A3FC822BA2FEF0061D612 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8A3FC722BA2FEF0061D612 /* ViewController.swift */; };
 		3E8A3FCB22BA2FEF0061D612 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E8A3FC922BA2FEF0061D612 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		149BA85B943318EFECAEDEF8 /* Pods_Forebase_memo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Forebase_memo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E0766CF22C99BE30037ACCC /* DeleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteViewController.swift; sourceTree = "<group>"; };
 		3E8A3FC222BA2FEF0061D612 /* Forebase_memo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forebase_memo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E8A3FC522BA2FEF0061D612 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E8A3FC722BA2FEF0061D612 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				3E8A3FC522BA2FEF0061D612 /* AppDelegate.swift */,
 				3E8A3FC722BA2FEF0061D612 /* ViewController.swift */,
 				3EA5D0FA22C91CCA00AF11A5 /* DatabaseViewController.swift */,
+				3E0766CF22C99BE30037ACCC /* DeleteViewController.swift */,
 				3E8A3FC922BA2FEF0061D612 /* Main.storyboard */,
 				3E8A3FCC22BA2FF10061D612 /* Assets.xcassets */,
 				3E8A3FCE22BA2FF10061D612 /* LaunchScreen.storyboard */,
@@ -257,6 +260,7 @@
 				3EA5D0FB22C91CCA00AF11A5 /* DatabaseViewController.swift in Sources */,
 				3E8A3FC822BA2FEF0061D612 /* ViewController.swift in Sources */,
 				3E8A3FC622BA2FEF0061D612 /* AppDelegate.swift in Sources */,
+				3E0766D022C99BE30037ACCC /* DeleteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

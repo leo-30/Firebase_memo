@@ -1,5 +1,5 @@
 //
-//  DatabaseViewController.swift
+//  DeleteViewController.swift
 //  Forebase_memo
 //
 //  Created by 原田澪 on 2019/07/01.
@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class DatabaseViewController: UIViewController {
+class DeleteViewController: UIViewController {
     
     @IBOutlet var data: UITextView!
     @IBOutlet var name: UITextField!
@@ -19,19 +19,17 @@ class DatabaseViewController: UIViewController {
     @IBAction func doAction() {
         self.name.endEditing(true)
         let nm: String = self.name.text!
-        let ml: String = self.mail.text!
-        let ag: Int = Int(self.age.text!)!
-        let data = [
-            "name":nm,
-            "mail":ml,
-            "age":ag
-            ] as [String : Any]
-        self.people.addDocument(data: data)
+        self.people.document(nm).delete()
+    }
+    
+    @IBAction func tapBack(_ sender: UIButton) {
+        //画面遷移して前の画面に戻る
+        self.dismiss(animated: true, completion: nil)
     }
     
     var db: Firestore!
     var people: CollectionReference!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,21 +38,12 @@ class DatabaseViewController: UIViewController {
         self.people.getDocuments(){(querySnapshot, err) in var res: String = ""
             for val in querySnapshot!.documents {
                 let nm = val.get("name") as! String
-                let ml = val.get("mail") as! String
-                let ag = val.get("age") as! Int
-                res += nm + " [" + ml + ":" + String(ag) + "\n"
+                res += nm + " [" + val.documentID + " ]\n"
             }
             self.data.text = res
         }
         
         
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
-    @IBAction func tapDelete() {
-        self.performSegue(withIdentifier: "toDelete", sender: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -64,6 +53,7 @@ class DatabaseViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
     }
+
 
     /*
     // MARK: - Navigation
