@@ -116,13 +116,23 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0k-4z-dOR">
-                                <rect key="frame" x="330" y="71" width="54" height="36"/>
+                                <rect key="frame" x="329" y="71" width="57" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="delete"/>
+                                <state key="normal" title="Delete"/>
                                 <connections>
                                     <action selector="tapDelete" destination="Vhs-F3-uYd" eventType="touchUpInside" id="Q4k-mk-CD9"/>
                                     <segue destination="gwb-z8-ojy" kind="show" identifier="toDelete" id="Dsa-QN-GWN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guR-sR-SYz">
+                                <rect key="frame" x="20" y="71" width="72" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="SignOut"/>
+                                <connections>
+                                    <action selector="signOut" destination="Vhs-F3-uYd" eventType="touchUpInside" id="vCz-aT-JQ7"/>
+                                    <action selector="tapDelete" destination="Vhs-F3-uYd" eventType="touchUpInside" id="BLq-Cs-b5P"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -163,10 +173,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esw-wa-Jvo">
-                                <rect key="frame" x="182" y="260" width="54" height="36"/>
+                                <rect key="frame" x="181" y="260" width="57" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="delete"/>
+                                <state key="normal" title="Delete"/>
                                 <connections>
                                     <action selector="doAction" destination="gwb-z8-ojy" eventType="touchUpInside" id="YWb-Qk-a4A"/>
                                 </connections>

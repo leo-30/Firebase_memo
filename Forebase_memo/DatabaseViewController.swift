@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import GoogleSignIn
 
 class DatabaseViewController: UIViewController {
     
@@ -31,7 +32,7 @@ class DatabaseViewController: UIViewController {
     
     var db: Firestore!
     var people: CollectionReference!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,32 +48,40 @@ class DatabaseViewController: UIViewController {
             self.data.text = res
         }
         
+    }
+
+    
+//    @IBAction func signOut() {
+//        do {
+//            try Auth.auth().signOut()
+//            self.dismiss(animated: true, completion: nil)
+//        } catch {
+//        }
+//    }
+    
+        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            self.view.endEditing(true)
+        }
+        @IBAction func tapDelete() {
+            self.performSegue(withIdentifier: "toDelete", sender: nil)
+        }
         
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
-    @IBAction func tapDelete() {
-        self.performSegue(withIdentifier: "toDelete", sender: nil)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-    }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+        override func viewWillAppear(_ animated: Bool) {
+            super.viewWillAppear(animated)
+        }
+        
+        override func viewWillDisappear(_ animated: Bool) {
+            super.viewWillDisappear(animated)
+        }
+        
+        /*
+         // MARK: - Navigation
+         
+         // In a storyboard-based application, you will often want to do a little preparation before navigation
+         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         // Get the new view controller using segue.destination.
+         // Pass the selected object to the new view controller.
+         }
+         */
+        
 }
